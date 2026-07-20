@@ -1,12 +1,15 @@
+This is a clean, old-style academic webpage designed for a postdoctoral mathematician. It uses a classic layout with a serif font, muted colors, and a two-column structure for presenting research and publications.
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Postdoc Mathematician · simple site</title>
-  <!-- fonts & minimal icons (Font Awesome) -->
+  <title>Postdoctoral Mathematician · classic style</title>
+  <!-- Font Awesome (free icons) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
+    /* old-style academic: serif, muted colors, clean borders */
     * {
       margin: 0;
       padding: 0;
@@ -14,152 +17,165 @@
     }
 
     body {
-      font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
-      background: #f5f7fa;
-      color: #1e2a3a;
-      line-height: 1.6;
-      padding: 2rem 1rem;
+      background: #f2efe9;
+      font-family: 'Georgia', 'Times New Roman', Times, serif;
+      color: #1f2a3a;
+      padding: 2.5rem 1.2rem;
+      line-height: 1.55;
     }
 
-    .page {
-      max-width: 1000px;
+    .container {
+      max-width: 1050px;
       margin: 0 auto;
-      background: white;
-      border-radius: 24px;
-      padding: 2.2rem 2.5rem;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.04);
+      background: #fefcf8;
+      padding: 2.5rem 3rem;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+      border: 1px solid #d6d2ca;
+      border-radius: 4px;
     }
 
     /* header */
-    .head {
+    .header {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #e6ecf3;
-      padding-bottom: 1.5rem;
+      align-items: flex-end;
+      border-bottom: 2px solid #b9b2a6;
+      padding-bottom: 1.2rem;
       margin-bottom: 1.8rem;
     }
 
     .name-title h1 {
-      font-size: 2.4rem;
-      font-weight: 600;
-      letter-spacing: -0.02em;
-      color: #0b1a2b;
+      font-size: 2.6rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: #1f2a3a;
+      font-family: 'Georgia', serif;
+      margin-bottom: 0.15rem;
     }
 
-    .name-title .role {
-      background: #eef3f9;
-      padding: 0.2rem 1.2rem;
-      border-radius: 40px;
-      font-size: 1rem;
-      font-weight: 500;
-      color: #1f3a5c;
+    .name-title .affiliation {
+      font-size: 1.1rem;
+      color: #3d4d5f;
+      font-style: italic;
+      background: #efebe6;
+      padding: 0.1rem 1.2rem;
+      border-radius: 30px;
       display: inline-block;
-      margin-top: 0.2rem;
+      font-weight: 400;
     }
 
-    .github-link {
-      background: #0d1117;
-      color: white;
-      padding: 0.5rem 1.4rem;
-      border-radius: 40px;
+    .github-badge {
+      background: #2b3a4b;
+      color: #f2ede7;
+      padding: 0.4rem 1.4rem;
+      border-radius: 30px;
       font-size: 0.9rem;
+      font-family: 'Georgia', serif;
       text-decoration: none;
       display: inline-flex;
       align-items: center;
       gap: 0.6rem;
-      font-weight: 500;
-      transition: background 0.1s;
+      border: 1px solid #5b6a7a;
+      letter-spacing: 0.02em;
     }
 
-    .github-link i {
-      font-size: 1.1rem;
+    .github-badge i {
+      font-size: 1rem;
     }
 
-    .github-link:hover {
-      background: #1f2a3f;
+    .github-badge:hover {
+      background: #1f2a3a;
+      color: white;
     }
 
     /* tagline */
-    .tag {
-      background: #f2f6fc;
-      padding: 0.9rem 1.6rem;
-      border-radius: 60px;
+    .tagline {
+      background: #f3efe9;
+      padding: 0.8rem 1.6rem;
+      border-left: 6px solid #8a7a64;
       margin-bottom: 2rem;
       font-size: 1.05rem;
+      color: #2f3d4e;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      gap: 0.6rem 1.2rem;
-      border-left: 5px solid #2c6b9e;
+      gap: 0.8rem 1.5rem;
+      border-radius: 0 40px 40px 0;
     }
 
-    .tag i {
-      color: #1f5a8c;
+    .tagline i {
+      color: #6d5d4a;
+      width: 1.4rem;
+      text-align: center;
     }
 
-    .tag .sep {
-      opacity: 0.5;
+    .tagline span.sep {
+      opacity: 0.4;
+      font-weight: 300;
     }
 
-    /* two columns */
-    .two-col {
+    /* grid */
+    .grid-2 {
       display: grid;
-      grid-template-columns: 1.8fr 1fr;
-      gap: 2.5rem;
-      margin-top: 0.5rem;
+      grid-template-columns: 1.9fr 1.1fr;
+      gap: 2.8rem;
+      margin-top: 0.2rem;
     }
 
     /* headings */
     h2 {
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: #0b1a2b;
-      border-bottom: 2px solid #e0e8f2;
+      font-size: 1.3rem;
+      font-weight: 700;
+      font-family: 'Georgia', serif;
+      color: #1f2a3a;
+      border-bottom: 2px solid #d6cec2;
       padding-bottom: 0.3rem;
-      margin-bottom: 1.3rem;
+      margin-bottom: 1.2rem;
+      letter-spacing: 0.02em;
       display: flex;
       align-items: center;
       gap: 0.6rem;
     }
 
     h2 i {
-      color: #1f5a8c;
-      width: 1.6rem;
+      color: #6d5d4a;
       font-size: 1.1rem;
+      width: 1.6rem;
     }
 
     /* research */
     .research-item {
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.8rem;
     }
 
     .research-item h3 {
-      font-weight: 600;
-      font-size: 1.1rem;
-      color: #1a2a40;
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: #1f2a3a;
+      font-family: 'Georgia', serif;
+      margin-bottom: 0.1rem;
     }
 
-    .research-item .sub {
+    .research-item .meta {
       font-size: 0.9rem;
-      color: #3d5670;
-      margin-bottom: 0.2rem;
-      font-weight: 500;
+      color: #5b6a7a;
+      font-style: italic;
+      margin-bottom: 0.3rem;
     }
 
     .research-item p {
-      color: #253544;
+      color: #2d3d4f;
     }
 
-    /* pub list */
+    /* publication list */
     .pub-list {
       list-style: none;
     }
 
     .pub-list li {
       padding: 0.9rem 0;
-      border-bottom: 1px solid #edf2f8;
+      border-bottom: 1px solid #e3ddd4;
       display: flex;
       gap: 0.7rem;
     }
@@ -169,102 +185,108 @@
     }
 
     .pub-icon {
-      color: #1f5a8c;
+      color: #6d5d4a;
       min-width: 1.4rem;
-      font-size: 0.95rem;
-      padding-top: 0.1rem;
+      font-size: 0.9rem;
+      padding-top: 0.15rem;
     }
 
     .pub-content strong {
-      font-weight: 600;
-      color: #0b1a2b;
+      font-weight: 700;
+      color: #1f2a3a;
     }
 
-    .pub-venue {
+    .pub-content .venue {
       display: block;
       font-size: 0.82rem;
-      color: #4a5f7a;
-      margin-top: 0.1rem;
+      color: #4d5e6f;
+      font-style: italic;
+      margin-top: 0.05rem;
     }
 
-    .pub-links {
-      margin-top: 0.3rem;
+    .pub-content .links {
+      margin-top: 0.25rem;
       display: flex;
-      gap: 1rem;
       flex-wrap: wrap;
+      gap: 1rem;
     }
 
-    .pub-links a {
-      color: #1f5a8c;
+    .pub-content .links a {
+      color: #5d4d3a;
       text-decoration: none;
       font-size: 0.8rem;
       border-bottom: 1px dotted transparent;
+      font-family: 'Georgia', serif;
     }
 
-    .pub-links a:hover {
-      border-bottom: 1px dotted #1f5a8c;
+    .pub-content .links a:hover {
+      border-bottom: 1px dotted #5d4d3a;
     }
 
     /* sidebar */
-    .sidebar .profile-placeholder {
+    .sidebar .profile-pic {
       width: 100%;
       aspect-ratio: 1/1;
-      background: #dce6f0;
-      border-radius: 24px;
+      background: #dcd5ca;
+      border-radius: 8px;
       margin-bottom: 1.8rem;
-      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="%239bb1c9"><circle cx="50" cy="38" r="22" /><circle cx="50" cy="85" r="30" /></svg>');
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="%239a8b7a"><circle cx="50" cy="38" r="22" /><circle cx="50" cy="85" r="30" /></svg>');
       background-size: 55%;
       background-repeat: no-repeat;
       background-position: center 60%;
-      background-color: #dce6f0;
+      background-color: #dcd5ca;
       min-height: 150px;
+      border: 1px solid #bfb6a8;
     }
 
-    .info-card {
-      background: #f8faff;
-      border-radius: 20px;
-      padding: 1.2rem 1.4rem;
+    .info-block {
+      background: #f6f2ec;
+      border: 1px solid #dbd4c9;
+      padding: 1.2rem 1.5rem;
+      border-radius: 6px;
       margin-bottom: 1.8rem;
     }
 
-    .info-card p {
+    .info-block p {
       display: flex;
       align-items: center;
       gap: 0.8rem;
       font-size: 0.95rem;
-      margin: 0.5rem 0;
+      margin: 0.4rem 0;
+      font-family: 'Georgia', serif;
     }
 
-    .info-card i {
-      color: #1f5a8c;
-      width: 1.3rem;
+    .info-block i {
+      color: #6d5d4a;
+      width: 1.4rem;
       text-align: center;
+      font-size: 0.9rem;
     }
 
-    .info-card a {
-      color: #1f5a8c;
+    .info-block a {
+      color: #3d4d5f;
       text-decoration: none;
       border-bottom: 1px dotted transparent;
     }
 
-    .info-card a:hover {
-      border-bottom: 1px dotted #1f5a8c;
+    .info-block a:hover {
+      border-bottom: 1px dotted #3d4d5f;
     }
 
     .cv-btn {
-      background: #0b1a2b;
-      color: white;
-      border: none;
-      padding: 0.7rem 1.6rem;
-      border-radius: 60px;
-      font-weight: 600;
+      background: #2b3a4b;
+      color: #f5efe9;
+      border: 1px solid #5b6a7a;
+      padding: 0.6rem 1.6rem;
+      border-radius: 40px;
+      font-family: 'Georgia', serif;
+      font-weight: 700;
       font-size: 0.95rem;
       display: inline-flex;
       align-items: center;
       gap: 0.6rem;
-      cursor: pointer;
       text-decoration: none;
-      margin-top: 0.2rem;
+      margin-top: 0.1rem;
     }
 
     .cv-btn i {
@@ -272,142 +294,147 @@
     }
 
     .cv-btn:hover {
-      background: #1f2a3f;
+      background: #1f2a3a;
+      border-color: #2b3a4b;
     }
 
-    .mini-news {
-      margin-top: 1.5rem;
+    .news-mini {
+      margin-top: 1.8rem;
     }
 
-    .mini-news ul {
+    .news-mini ul {
       list-style: none;
       font-size: 0.92rem;
     }
 
-    .mini-news li {
+    .news-mini li {
       padding: 0.4rem 0;
-      border-bottom: 1px dashed #e6ecf3;
+      border-bottom: 1px dashed #ddd6cb;
       display: flex;
       gap: 0.5rem;
     }
 
-    .mini-news li:last-child {
+    .news-mini li:last-child {
       border-bottom: none;
     }
 
-    .mini-news i {
-      color: #1f5a8c;
-      font-size: 0.5rem;
+    .news-mini i {
+      color: #6d5d4a;
+      font-size: 0.45rem;
       padding-top: 0.5rem;
     }
 
     /* footer */
     .footer {
       margin-top: 2.8rem;
-      border-top: 1px solid #e6ecf3;
-      padding-top: 1.8rem;
+      border-top: 2px solid #d6cec2;
+      padding-top: 1.5rem;
       text-align: center;
-      color: #4d637c;
-      font-size: 0.9rem;
+      color: #4d5e6f;
+      font-size: 0.85rem;
       display: flex;
       justify-content: center;
       gap: 2rem;
       flex-wrap: wrap;
+      font-family: 'Georgia', serif;
     }
 
     .footer a {
-      color: #1f5a8c;
+      color: #3d4d5f;
       text-decoration: none;
+      border-bottom: 1px dotted transparent;
     }
 
     .footer a i {
       margin-right: 0.3rem;
     }
 
+    .footer a:hover {
+      border-bottom: 1px dotted #3d4d5f;
+    }
+
     /* responsive */
-    @media (max-width: 700px) {
-      .page {
-        padding: 1.5rem;
+    @media (max-width: 780px) {
+      .container {
+        padding: 1.8rem 1.5rem;
       }
-      .two-col {
+      .grid-2 {
         grid-template-columns: 1fr;
-        gap: 1.8rem;
+        gap: 2rem;
       }
-      .head {
+      .header {
         flex-direction: column;
         align-items: flex-start;
         gap: 0.8rem;
       }
       .name-title h1 {
-        font-size: 2rem;
-      }
-      .tag {
-        border-radius: 30px;
-        padding: 0.8rem 1.2rem;
-        font-size: 0.95rem;
+        font-size: 2.2rem;
       }
     }
 
-    @media (max-width: 450px) {
+    @media (max-width: 480px) {
       body {
-        padding: 0.8rem;
+        padding: 0.8rem 0.3rem;
       }
-      .page {
-        padding: 1rem;
-        border-radius: 20px;
+      .container {
+        padding: 1rem 1rem;
+      }
+      .tagline {
+        font-size: 0.95rem;
+        padding: 0.6rem 1rem;
       }
     }
   </style>
 </head>
 <body>
 
-<div class="page">
+<div class="container">
 
   <!-- header -->
-  <div class="head">
+  <div class="header">
     <div class="name-title">
-      <h1>Dr. Elena Markov</h1>
-      <div class="role"><i class="fas fa-university" style="margin-right: 0.4rem;"></i> Postdoctoral Fellow · UChicago</div>
+      <h1>Dr. Elena V. Markov</h1>
+      <div class="affiliation"><i class="fas fa-university" style="margin-right: 0.4rem;"></i> Postdoctoral Fellow · University of Chicago</div>
     </div>
-    <a href="#" class="github-link"><i class="fab fa-github"></i> elenamath</a>
+    <a href="#" class="github-badge"><i class="fab fa-github"></i> github.com/elenamath</a>
   </div>
 
   <!-- tagline -->
-  <div class="tag">
+  <div class="tagline">
     <i class="fas fa-square-root-variable"></i>
-    <span>Arithmetic geometry · Langlands · automorphic forms</span>
+    <span>Arithmetic geometry · Langlands program · automorphic forms</span>
     <span class="sep">|</span>
-    <span><i class="far fa-calendar-alt"></i> 2026–2028</span>
+    <span><i class="far fa-calendar-alt"></i> 2026 – 2028</span>
   </div>
 
-  <!-- two columns -->
-  <div class="two-col">
+  <!-- grid -->
+  <div class="grid-2">
 
-    <!-- main left -->
-    <div class="main">
+    <!-- left column -->
+    <div class="main-col">
 
       <!-- research -->
       <h2><i class="fas fa-flask"></i> Research</h2>
       <div class="research-item">
-        <h3>p-adic L-functions & Iwasawa theory</h3>
-        <div class="sub">with K. Kimura · 2025–present</div>
-        <p>Constructing p-adic measures attached to Hilbert modular forms and special values.</p>
+        <h3>p-adic L-functions and Iwasawa theory</h3>
+        <div class="meta">with Prof. K. Kimura · 2025–present</div>
+        <p>Constructing p-adic measures attached to Hilbert modular forms and special values in relation to Birch–Swinnerton-Dyer type conjectures.</p>
       </div>
       <div class="research-item">
         <h3>Automorphic representations of unitary groups</h3>
-        <div class="sub">NSF grant DMS-2205123 · 2024–2026</div>
+        <div class="meta">NSF grant DMS-2205123 · 2024–2026</div>
         <p>Local–global compatibility for Rankin–Selberg convolutions and applications to the Gan–Gross–Prasad conjecture.</p>
       </div>
 
       <!-- publications -->
-      <h2 style="margin-top: 1.8rem;"><i class="fas fa-file-alt"></i> Publications</h2>
+      <h2 style="margin-top: 2rem;"><i class="fas fa-file-alt"></i> Publications & preprints</h2>
       <ul class="pub-list">
         <li>
           <span class="pub-icon"><i class="fas fa-file-pdf"></i></span>
           <div class="pub-content">
             <strong>On the p-adic Birch–Swinnerton-Dyer for CM fields</strong>
-            <span class="pub-venue">Math. Ann. 2026 (to appear) · arXiv:2501.04237</span>
-            <div class="pub-links">
+            <span class="venue">Math. Ann. 2026 (to appear) · arXiv: 2501.04237</span>
+            <div class="links">
               <a href="#"><i class="fas fa-external-link-alt"></i> arXiv</a>
               <a href="#"><i class="fas fa-book-open"></i> journal</a>
             </div>
@@ -417,8 +444,8 @@
           <span class="pub-icon"><i class="fas fa-file-pdf"></i></span>
           <div class="pub-content">
             <strong>Eisenstein series and theta lifts on unitary groups</strong>
-            <span class="pub-venue">J. Number Theory 276 (2025), 1–34</span>
-            <div class="pub-links">
+            <span class="venue">J. Number Theory 276 (2025), 1–34</span>
+            <div class="links">
               <a href="#"><i class="fas fa-external-link-alt"></i> DOI</a>
               <a href="#"><i class="fas fa-archive"></i> preprint</a>
             </div>
@@ -428,8 +455,8 @@
           <span class="pub-icon"><i class="fas fa-file-pdf"></i></span>
           <div class="pub-content">
             <strong>Local coefficients for GSp(4) and the Siegel-Weil formula</strong>
-            <span class="pub-venue">with H. Tanaka · Compositio Math. 2024, 160(3), 512–548</span>
-            <div class="pub-links">
+            <span class="venue">with H. Tanaka · Compositio Math. 2024, 160(3), 512–548</span>
+            <div class="links">
               <a href="#"><i class="fas fa-external-link-alt"></i> project</a>
               <a href="#"><i class="fas fa-code"></i> code</a>
             </div>
@@ -439,43 +466,45 @@
           <span class="pub-icon"><i class="fas fa-file-pdf"></i></span>
           <div class="pub-content">
             <strong>p-adic interpolation of triple product L-functions</strong>
-            <span class="pub-venue">preprint · submitted 2025</span>
-            <div class="pub-links"><a href="#"><i class="fas fa-external-link-alt"></i> arXiv</a></div>
+            <span class="venue">preprint · submitted 2025</span>
+            <div class="links">
+              <a href="#"><i class="fas fa-external-link-alt"></i> arXiv</a>
+            </div>
           </div>
         </li>
       </ul>
     </div>
 
-    <!-- sidebar right -->
+    <!-- sidebar -->
     <div class="sidebar">
 
-      <!-- profile image placeholder -->
-      <div class="profile-placeholder" aria-label="portrait"></div>
+      <!-- profile placeholder -->
+      <div class="profile-pic" aria-label="portrait"></div>
 
-      <!-- contact / info -->
-      <div class="info-card">
+      <!-- info -->
+      <div class="info-block">
         <p><i class="fas fa-envelope"></i> <a href="mailto:emar@math.uchicago.edu">emar@math.uchicago.edu</a></p>
-        <p><i class="fas fa-map-pin"></i> Eckhart Hall, Chicago</p>
+        <p><i class="fas fa-map-pin"></i> Eckhart Hall, 5734 S. University Ave</p>
         <p><i class="fas fa-phone-alt"></i> +1 (773) 702-1234</p>
         <p><i class="fab fa-orcid"></i> <a href="#">0000-0002-1234-5678</a></p>
-        <p><i class="fas fa-graduation-cap"></i> PhD Princeton, 2024</p>
+        <p><i class="fas fa-graduation-cap"></i> PhD · Princeton, 2024</p>
       </div>
 
-      <!-- CV button -->
+      <!-- CV -->
       <a href="#" class="cv-btn" download><i class="fas fa-file-pdf"></i> Download CV (PDF)</a>
-      <p style="font-size: 0.75rem; color: #4a5f7a; margin-top: 0.3rem;">updated April 2026</p>
+      <p style="font-size: 0.75rem; color: #4d5e6f; margin-top: 0.3rem; font-style: italic;">updated April 2026</p>
 
-      <!-- quick teaching / talks -->
-      <div style="background: #f7faff; border-radius: 18px; padding: 0.9rem 1.2rem; margin: 1.2rem 0; border:1px solid #eaf0f8;">
+      <!-- teaching & talks -->
+      <div style="background: #f6f2ec; border: 1px solid #dbd4c9; border-radius: 6px; padding: 0.8rem 1.2rem; margin: 1.4rem 0;">
         <p style="display: flex; gap: 1.2rem; flex-wrap: wrap; margin:0;">
-          <span><i class="fas fa-chalkboard-teacher" style="color:#1f5a8c; width:1.2rem;"></i> Math 262 (Spring 2026)</span>
-          <span><i class="fas fa-microphone-alt" style="color:#1f5a8c; width:1.2rem;"></i> <a href="#" style="color:#1f5a8c; text-decoration:none;">talks</a></span>
+          <span><i class="fas fa-chalkboard-teacher" style="color:#6d5d4a; width:1.2rem;"></i> Math 262 (Spring 2026)</span>
+          <span><i class="fas fa-microphone-alt" style="color:#6d5d4a; width:1.2rem;"></i> <a href="#" style="color:#3d4d5f; text-decoration:none; border-bottom:1px dotted transparent;">talks</a></span>
         </p>
       </div>
 
-      <!-- news mini -->
-      <div class="mini-news">
-        <h2 style="font-size:1rem; border-bottom: 2px solid #dce6f0; padding-bottom:0.2rem;"><i class="fas fa-newspaper"></i> News</h2>
+      <!-- news -->
+      <div class="news-mini">
+        <h2 style="font-size:1.1rem; border-bottom:2px solid #d6cec2; padding-bottom:0.2rem;"><i class="fas fa-newspaper"></i> News</h2>
         <ul>
           <li><i class="fas fa-circle"></i> Apr 2026: invited speaker at AMS sectional</li>
           <li><i class="fas fa-circle"></i> Feb 2026: awarded NSF postdoctoral fellowship</li>
@@ -487,13 +516,14 @@
 
   <!-- footer -->
   <div class="footer">
-    <span><i class="fas fa-code"></i> built for GitHub pages · mathematician</span>
+    <span><i class="fas fa-code"></i> built for GitHub pages · classic style</span>
     <a href="#"><i class="fab fa-github"></i> source</a>
     <a href="#"><i class="fas fa-rss"></i> RSS</a>
     <span><i class="far fa-copyright"></i> 2026 Elena Markov</span>
   </div>
 
 </div>
-<!-- end page -->
+<!-- end container -->
 </body>
 </html>
+```
