@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Postdoctoral Mathematician · classic style</title>
+  <title>Postdoc & Tutor · University Mathematics</title>
   <!-- Font Awesome (free icons) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
-    /* old-style academic: serif, muted colors, clean borders */
+    /* classic, warm academic style */
     * {
       margin: 0;
       padding: 0;
@@ -23,7 +23,7 @@
     }
 
     .container {
-      max-width: 1050px;
+      max-width: 1100px;
       margin: 0 auto;
       background: #fefcf8;
       padding: 2.5rem 3rem;
@@ -49,11 +49,11 @@
       letter-spacing: -0.01em;
       color: #1f2a3a;
       font-family: 'Georgia', serif;
-      margin-bottom: 0.15rem;
+      margin-bottom: 0.1rem;
     }
 
     .name-title .affiliation {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       color: #3d4d5f;
       font-style: italic;
       background: #efebe6;
@@ -75,7 +75,6 @@
       align-items: center;
       gap: 0.6rem;
       border: 1px solid #5b6a7a;
-      letter-spacing: 0.02em;
     }
 
     .github-badge i {
@@ -108,7 +107,7 @@
       text-align: center;
     }
 
-    .tagline span.sep {
+    .tagline .sep {
       opacity: 0.4;
       font-weight: 300;
     }
@@ -142,12 +141,12 @@
       width: 1.6rem;
     }
 
-    /* research */
-    .research-item {
-      margin-bottom: 1.8rem;
+    /* research & tutor items */
+    .research-item, .tutor-item {
+      margin-bottom: 1.6rem;
     }
 
-    .research-item h3 {
+    .research-item h3, .tutor-item h3 {
       font-weight: 700;
       font-size: 1.15rem;
       color: #1f2a3a;
@@ -155,15 +154,25 @@
       margin-bottom: 0.1rem;
     }
 
-    .research-item .meta {
+    .research-item .meta, .tutor-item .meta {
       font-size: 0.9rem;
       color: #5b6a7a;
       font-style: italic;
-      margin-bottom: 0.3rem;
+      margin-bottom: 0.2rem;
     }
 
-    .research-item p {
+    .research-item p, .tutor-item p {
       color: #2d3d4f;
+    }
+
+    .tutor-item ul {
+      margin-top: 0.2rem;
+      padding-left: 1.2rem;
+      color: #2d3d4f;
+    }
+
+    .tutor-item ul li {
+      margin-bottom: 0.15rem;
     }
 
     /* publication list */
@@ -397,10 +406,10 @@
     <a href="#" class="github-badge"><i class="fab fa-github"></i> github.com/elenamath</a>
   </div>
 
-  <!-- tagline -->
+  <!-- tagline (now includes tutor) -->
   <div class="tagline">
     <i class="fas fa-square-root-variable"></i>
-    <span>Arithmetic geometry · Langlands program · automorphic forms</span>
+    <span>Research · Teaching · University tutoring</span>
     <span class="sep">|</span>
     <span><i class="far fa-calendar-alt"></i> 2026 – 2028</span>
   </div>
@@ -411,7 +420,7 @@
     <!-- left column -->
     <div class="main-col">
 
-      <!-- research -->
+      <!-- RESEARCH section -->
       <h2><i class="fas fa-flask"></i> Research</h2>
       <div class="research-item">
         <h3>p-adic L-functions and Iwasawa theory</h3>
@@ -424,7 +433,26 @@
         <p>Local–global compatibility for Rankin–Selberg convolutions and applications to the Gan–Gross–Prasad conjecture.</p>
       </div>
 
-      <!-- publications -->
+      <!-- TEACHING / TUTOR section (new) -->
+      <h2 style="margin-top: 2rem;"><i class="fas fa-chalkboard-teacher"></i> University tutoring</h2>
+      <div class="tutor-item">
+        <h3>Undergraduate & graduate mathematics</h3>
+        <div class="meta">Department of Mathematics · 2024–present</div>
+        <ul>
+          <li><strong>MATH 262:</strong> Intermediate Analysis (Spring 2026) — weekly problem sessions, office hours.</li>
+          <li><strong>MATH 205:</strong> Linear Algebra (Fall 2025) — tutorial groups, exam preparation.</li>
+          <li><strong>MATH 330:</strong> Number Theory (graduate) — independent tutoring for 3 students.</li>
+        </ul>
+        <p style="margin-top: 0.4rem;"><i class="fas fa-calendar-check" style="color:#6d5d4a; width:1.2rem;"></i> Drop-in tutoring: Tue/Thu 2–4pm (Eckhart 201).</p>
+      </div>
+      <div class="tutor-item">
+        <h3>Private & small-group sessions</h3>
+        <div class="meta">by appointment · all levels</div>
+        <p>Focus on problem-solving, proof techniques, and preparation for qualifying exams. <br>
+        <i class="fas fa-envelope" style="color:#6d5d4a; width:1.2rem;"></i> <a href="mailto:emar@math.uchicago.edu" style="color:#3d4d5f;">emar@math.uchicago.edu</a> to schedule.</p>
+      </div>
+
+      <!-- PUBLICATIONS -->
       <h2 style="margin-top: 2rem;"><i class="fas fa-file-alt"></i> Publications & preprints</h2>
       <ul class="pub-list">
         <li>
@@ -479,7 +507,7 @@
       <!-- profile placeholder -->
       <div class="profile-pic" aria-label="portrait"></div>
 
-      <!-- info -->
+      <!-- contact info -->
       <div class="info-block">
         <p><i class="fas fa-envelope"></i> <a href="mailto:emar@math.uchicago.edu">emar@math.uchicago.edu</a></p>
         <p><i class="fas fa-map-pin"></i> Eckhart Hall, 5734 S. University Ave</p>
@@ -488,15 +516,18 @@
         <p><i class="fas fa-graduation-cap"></i> PhD · Princeton, 2024</p>
       </div>
 
-      <!-- CV -->
+      <!-- CV download -->
       <a href="#" class="cv-btn" download><i class="fas fa-file-pdf"></i> Download CV (PDF)</a>
       <p style="font-size: 0.75rem; color: #4d5e6f; margin-top: 0.3rem; font-style: italic;">updated April 2026</p>
 
-      <!-- teaching & talks -->
+      <!-- teaching quick reference -->
       <div style="background: #f6f2ec; border: 1px solid #dbd4c9; border-radius: 6px; padding: 0.8rem 1.2rem; margin: 1.4rem 0;">
-        <p style="display: flex; gap: 1.2rem; flex-wrap: wrap; margin:0;">
-          <span><i class="fas fa-chalkboard-teacher" style="color:#6d5d4a; width:1.2rem;"></i> Math 262 (Spring 2026)</span>
-          <span><i class="fas fa-microphone-alt" style="color:#6d5d4a; width:1.2rem;"></i> <a href="#" style="color:#3d4d5f; text-decoration:none; border-bottom:1px dotted transparent;">talks</a></span>
+        <p style="display: flex; gap: 1.2rem; flex-wrap: wrap; margin:0; font-size:0.95rem;">
+          <span><i class="fas fa-chalkboard-teacher" style="color:#6d5d4a; width:1.2rem;"></i> <strong>MATH 262</strong> (Spring 2026)</span>
+          <span><i class="fas fa-users" style="color:#6d5d4a; width:1.2rem;"></i> tutorial groups</span>
+        </p>
+        <p style="margin:0.3rem 0 0 0; font-size:0.9rem; color:#3d4d5f;">
+          <i class="fas fa-clock" style="color:#6d5d4a; width:1.2rem;"></i> Tue/Thu 2–4pm · Eckhart 201
         </p>
       </div>
 
@@ -507,6 +538,7 @@
           <li><i class="fas fa-circle"></i> Apr 2026: invited speaker at AMS sectional</li>
           <li><i class="fas fa-circle"></i> Feb 2026: awarded NSF postdoctoral fellowship</li>
           <li><i class="fas fa-circle"></i> Jan 2026: new preprint on p-adic L-functions</li>
+          <li><i class="fas fa-circle"></i> Dec 2025: started tutoring program for graduate students</li>
         </ul>
       </div>
     </div>
@@ -514,7 +546,7 @@
 
   <!-- footer -->
   <div class="footer">
-    <span><i class="fas fa-code"></i> built for GitHub pages · classic style</span>
+    <span><i class="fas fa-code"></i> built for GitHub pages · tutor & researcher</span>
     <a href="#"><i class="fab fa-github"></i> source</a>
     <a href="#"><i class="fas fa-rss"></i> RSS</a>
     <span><i class="far fa-copyright"></i> 2026 Elena Markov</span>
@@ -524,3 +556,4 @@
 <!-- end container -->
 </body>
 </html>
+```
